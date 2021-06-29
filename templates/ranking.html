@@ -1,10 +1,19 @@
 {% block title %}{% endblock %}
 
 {% block body %}
-{% for result in results %}
-<li>
-	{{result.user_name}}
-	{{result.score}}
-</li>
-{% endfor %}
+<a href="../" role="button">Home</a>
+<table border="1" style="margin-left: auto;margin-right: auto;">
+	<tr>
+		<th>rank</th>
+		<th>user_name</th>
+		<th>score</th>
+	</tr>
+	{% for result in results %}
+	<tr>
+		<th>{{loop.index}}</th>
+		<th>{{result.user_name}}</th>
+		<th>{{result.score}}</th>
+	</tr>
+	{% endfor %}
+</table>
 {% endblock %}

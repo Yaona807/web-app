@@ -1,0 +1,10 @@
+{% block title %}{% endblock %}
+
+{% block body %}
+{% for result in results %}
+<li>
+	{{result.user_name}}
+	{{result.score}}
+</li>
+{% endfor %}
+{% endblock %}

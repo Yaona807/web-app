@@ -1,6 +1,22 @@
-{% block title %}{% endblock %}
+{% extends "base.html" %}
+
+{% block head %}{% endblock %}
 
 {% block body %}
-<a href="/game" role="button">Game Start</a>
-<a href="/ranking" role="button">Ranking</a>
+<div>
+	<ul class="nav nav-pills">
+		<li class="nav-item">
+			<a class="nav-link active" aria-current="page" href="#">Home</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="/game">Game Start</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="/ranking">Ranking</a>
+		</li>
+	</ul>
+</div>
+<div style="text-align:center;">
+	<h1>Count Up Game</h1>
+</div>
 {% endblock %}

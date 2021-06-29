@@ -1,16 +1,32 @@
-{% block title %}{% endblock %}
+{% extends "base.html" %}
+
+{% block head %}{% endblock %}
 
 {% block body %}
+<div>
+	<ul class="nav nav-pills">
+		<li class="nav-item">
+			<a class="nav-link" href="/">Home</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link active" aria-current="page" href="#">Game Start</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="/ranking">Ranking</a>
+		</li>
+	</ul>
+</div>
+
 <div id="disp_count" style="text-align:center;">
-	<b>0</b>
+	<h1>0</h1>
 </div>
 <center>
 	<div style="margin-left:10%;margin-right:10%;">
-		<input type="button" style="width:15%;padding:10px;font-size:30px;" value="Count Up!"
+		<input type="button" class="btn btn-primary" style="width:15%;padding:10px;font-size:30px;" value="Count Up!"
 			id="btn_count_up" />
 		<form action="/game" method="POST">
-			<button style="margin-top:1%;width:15%;padding:10px;font-size:30px;" value=0 id="btn_end"
-				name="end">End</button>
+			<button class="btn btn-danger" style="margin-top:1%;width:15%;padding:10px;font-size:30px;" value=0
+				id="btn_end" name="end">End</button>
 			<input type="text" id="user_name" name="name" value="" style="display:none"></>
 		</form>
 	</div>

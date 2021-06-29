@@ -1,8 +1,23 @@
-{% block title %}{% endblock %}
+{% extends "base.html" %}
+
+{% block head %}{% endblock %}
 
 {% block body %}
-<a href="../" role="button">Home</a>
-<table border="1" style="margin-left: auto;margin-right: auto;">
+<div>
+	<ul class="nav nav-pills">
+		<li class="nav-item">
+			<a class="nav-link" href="/">Home</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="/game">Game Start</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link active" aria-current="page" href="#">Ranking</a>
+		</li>
+	</ul>
+</div>
+
+<table class="table table-striped table-hover table-bordered border-dark" style="margin-left: auto;margin-right: auto;width: 50%;">
 	<tr>
 		<th>rank</th>
 		<th>user_name</th>

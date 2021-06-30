@@ -51,9 +51,9 @@ def end():
 def ranking_print():
     # scoreを用いて降順ソート
     results = Result.query.order_by(Result.score.desc()).all()
-    print(results[0].user_name)
+
     return render_template('ranking.html', results=results)
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()

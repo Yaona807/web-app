@@ -16,17 +16,23 @@
 		</li>
 	</ul>
 </div>
-
+<div id="score" class="badge bg-secondary" style="margin-left:70%;width:auto;font-size:30px;">
+	総得点 0
+</div>
 <div id="disp_count" style="text-align:center;">
 	<h1>0</h1>
 </div>
 <center>
 	<div style="margin-left:10%;margin-right:10%;">
-		<input type="button" class="btn btn-primary" style="width:15%;padding:10px;font-size:30px;" value="Count Up!"
+		<input type="image" style="width:15%;padding:10px;font-size:30px;" src="../static/button_onoff1.png"
 			id="btn_count_up" />
+		<div>
+			<button class="btn btn-success" style="margin-top:1%;width:15%;padding:10px;font-size:30px;"
+				id="exchange">換金<br>0</button>
+		</div>
 		<form action="/game" method="POST">
-			<button class="btn btn-danger" style="margin-top:1%;width:15%;padding:10px;font-size:30px;" value=0
-				id="btn_end" name="end">End</button>
+			<button class="btn btn-danger" style="margin-top:1%;width:15%;padding:10px;font-size:30px;"
+				value=0 id="btn_end" name="end">End</button>
 			<input type="text" id="user_name" name="name" value="" style="display:none"></>
 		</form>
 	</div>

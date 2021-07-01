@@ -1,19 +1,25 @@
+from re import S
 from flask import Flask
 from flask import render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 import os
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL') or 'postgresql://localhost/ranking'
+app.config['SQLALCHEMY_DATABASE_URI'] = ''
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
 
 class Result(db.Model):
+    __tablename__ = 'ranking'
     id = db.Column(db.Integer, primary_key=True)
     user_name = db.Column(db.String(20), nullable=False)
     score = db.Column(db.Integer)
+
+    def __init__(self,user_name,score):
+        self.user_name = user_name
+        self.score = score
 
 
 @app.route('/')

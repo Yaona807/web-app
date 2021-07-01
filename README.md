@@ -6,7 +6,8 @@ webアプリケーションの勉強用リポジトリ
 
 ## 公開
 Herokuにデプロイしました。
-[こちら](https://count-up-game.herokuapp.com/)から参照できます。
+[こちら](https://count-up-game.herokuapp.com/)から参照できます。  
+※SQLiteからPostgreSQLへ変更しました。
 
 ## 目的
 
